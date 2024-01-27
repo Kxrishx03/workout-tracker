@@ -63,9 +63,10 @@ body,html {
 }
 
 .create{
-color: #81638b;
-margin: 20px auto;
- background-color: #dac9df;
+ color: #81638b;
+ margin: 20px auto;
+ background-color: #fff;
+ height: 25rem;
  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
  padding: 20px;
  line-height: 25px;
