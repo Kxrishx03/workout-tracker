@@ -13,6 +13,8 @@ app.use((req,res,next)=>{
    next();
 });
 
+app.use('/workouts',workoutRoutes);
+
 //connect to db
 mongoose.connect(process.env.MONGO_URI)
 .then(()=>{
