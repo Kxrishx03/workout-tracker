@@ -1,35 +1,27 @@
 const express = require('express');
+const workoutRoutes = require('./routes/workouts');
+const { default: mongoose } = require('mongoose');
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT;
+app.use(express.json());
 
-//Routes
 
-app.get('/workouts',(req,res)=>{
-
+app.use((req,res,next)=>{
+   console.log("CHECK");
+   next();
 });
 
-
-app.post('/workouts',(req,res)=>{
-
-});
-
-app.get('/workouts/:id',(req,res)=>{
-
-});
-
-
-app.delete('/workouts/:id',(req,res)=>{
-
-});
-
-app.patch('/workouts/:id',(req,res)=>{
-
-});
-
-
-
-app.listen(PORT,()=>{
-    console.log("Running on : " + PORT);
+//connect to db
+mongoose.connect(process.env.MONGO_URI)
+.then(()=>{
+    console.log("Connection succesfull");
+    app.listen(PORT,()=>{
+        console.log("Running on : " + PORT);
+    })
 })
+.catch((e)=>{
+    console.log("Error occurred: " + e);
+})
+
