@@ -1,4 +1,4 @@
-{
+{  "proxy":"http://localhost:3000",
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
+    "recoil": "^0.7.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

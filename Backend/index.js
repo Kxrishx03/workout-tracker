@@ -2,10 +2,15 @@ const express = require('express');
 const workoutRoutes = require('./routes/workouts');
 const { default: mongoose } = require('mongoose');
 require('dotenv').config();
+const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT;
 app.use(express.json());
+app.use(cors({
+    origin: 'http://localhost:5173',
+    optionsSuccessStatus: 200 
+}));
 
 
 app.use((req,res,next)=>{
