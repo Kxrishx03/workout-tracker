@@ -21,7 +21,7 @@ export function Workoutform(){
              }
         })
 
-        const json = response.json();
+        const json = await response.json();
         if(!response.ok){
              seterror(json.error);
         }
