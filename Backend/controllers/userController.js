@@ -11,8 +11,9 @@ const { User } = require('../modules/Usermodules');
         const user = await User.signup(username,password);
         res.status(200).json({username,user});
 
-    }catch(error){
-          res.status(400).json({messsage:error.messsage});
+    }catch(Error){
+
+          res.status(400).json({error: Error.message});
     }
    
 }
