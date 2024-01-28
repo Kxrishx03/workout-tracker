@@ -1,4 +1,4 @@
-# MERN Workout Tracker
+# Workout Tracker
 
 Welcome to the MERN Workout Tracker! This application is designed to help you keep track of your workouts and monitor your progress. It's built using the MERN (MongoDB, Express.js, React, Node.js) stack, providing a robust and efficient platform for managing your fitness routine.
 
@@ -29,29 +29,29 @@ Welcome to the MERN Workout Tracker! This application is designed to help you ke
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/mern-workout-tracker.git
+   git clone https://github.com/kxrishx03/workout-tracker.git
    cd mern-workout-tracker
       
 # Install server-side dependencies
-cd server
-npm install
+   cd server
+   npm install
 
 # Install client-side dependencies
-cd ../client
-npm install
+   cd ../client
+  npm install
 
 # Set up MongoDB
     Create a MongoDB Atlas account or set up a local MongoDB instance.
     Update the connection string in server/config/db.js with your MongoDB URI.
 
 # Start the server
-cd ../server
-npm start
+   cd ../server
+   npm start
 
 # Start the client (in a separate terminal)
 cd ../client
 npm start
 
-#Open in browser
+# Open in browser
     
     
