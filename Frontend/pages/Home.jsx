@@ -16,7 +16,7 @@ export function Home(){
         dispatch({type:'SET_WORKOUTS',payload:payload})
       }
     })
-  }, []); 
+  }, [dispatch]); 
 
  
    
