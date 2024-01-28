@@ -14,7 +14,7 @@ const userSchema = new Schema({
         required:true
     }
 });
-
+//signup static method
 userSchema.statics.signup = async function(username,password){
 
     //validation
@@ -41,6 +41,33 @@ userSchema.statics.signup = async function(username,password){
     
     const user = await this.create({username,password:hash});
 
+    return user;
+
+}
+
+
+//login  static method
+
+userSchema.statics.login = async function(username,password){
+
+    //validation 
+   if(!username || !password){
+    throw Error("All fields must be filled");
+   } 
+
+    const user = await this.findOne({username});
+    if(!user){
+
+        throw Error("Invalid username");
+
+    }
+
+    const match = await bcrypt.compare(password,user.password);
+
+    if(!match){
+        throw Error("Wrong Password");
+    }
+    
     return user;
 
 }
