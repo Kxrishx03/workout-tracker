@@ -29,6 +29,24 @@ body,html {
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  .login-signup-button{
+       display: flex;
+       justify-content: space-evenly;
+    
+  }
+
+  .login-signup-button > a{
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 10px;
+  }
+
+  a:hover{
+    cursor: pointer;
+    text-decoration: underline;
   }
 
   .pages{
@@ -66,7 +84,7 @@ body,html {
  color: #81638b;
  margin: 20px auto;
  background-color: #fff;
- height: 25rem;
+ height: 22rem;
  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
  padding: 20px;
  line-height: 25px;
@@ -82,12 +100,13 @@ body,html {
 
 label, input {
   display: block;
+  
 }
 
 input {
-  padding: 10px;
+  padding: 8px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -100,6 +119,7 @@ form button {
   background-color: #503459;
   border: 0;
   color: #fff;
+  margin-top: 5px;
   padding: 10px;
   font-family: "Poppins";
   border-radius: 4px;
@@ -117,4 +137,16 @@ form button {
   border-radius: 4px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   color:#dac9df;
+}
+
+
+.signup, .login{
+  background-color:#dac9df;
+  display: grid;
+  justify-self: center;
+  margin: 2rem auto 2rem auto;
+  padding: 10px;
+  justify-items: center;
+  width: 25rem;
+ 
 }

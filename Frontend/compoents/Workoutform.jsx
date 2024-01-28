@@ -45,12 +45,12 @@ export function Workoutform(){
             setTitle(e.target.value)
            }}></input>
 
-           <label typeof="text"> Exercise Load(in KG)</label>
+           <label typeof="text">Load(in KG)</label>
            <input type="number" placeholder="Load" value={load} onChange={(e)=>{
             setload(e.target.value)
            }}></input>
 
-           <label typeof="text"> Number of Reps</label>
+           <label typeof="text">Reps</label>
            <input type="number" placeholder="Reps" value={reps} onChange={(e)=>{
             setreps(e.target.value)
            }}></input>
