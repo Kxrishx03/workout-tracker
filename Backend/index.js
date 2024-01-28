@@ -3,14 +3,15 @@ const workoutRoutes = require('./routes/workouts');
 const userRoutes = require('./routes/user');
 const { default: mongoose } = require('mongoose');
 require('dotenv').config();
-const cors = require('cors');
+var cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT;
 app.use(express.json());
-app.use(cors({
-    origin: 'http://localhost:5173',
-    optionsSuccessStatus: 200 
+app.use(
+    cors({
+    origin:['http://localhost:5173/Signup','http://localhost:5173','http://localhost:5173/login']
+
 }));
 
 
