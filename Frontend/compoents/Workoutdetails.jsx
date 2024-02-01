@@ -1,12 +1,21 @@
 import { Useworkoutcontext } from "../hooks/Useworkoutcontext";
+import { UseAuthContext } from "../hooks/Useauthcontext";
 
 export function Workoutdetails({title,load,reps,createdAt,id}){
 
     const { dispatch } = Useworkoutcontext();
+    const { user } = UseAuthContext();
 
     async function onClickHandler(){
+
+        if(!user){
+            return;
+        }
         const response = await fetch('http://localhost:3000/workouts/' + id,{
-            method:'DELETE'
+            method:'DELETE',
+            headers:{
+                'Authorization': `Bearer ${user.token}`
+              }
         });
         const json = await response.json();
         if(response.ok){

@@ -2,21 +2,30 @@ import { useEffect } from "react";
 import { Useworkoutcontext } from "../hooks/Useworkoutcontext";
 import { Workoutdetails } from "../compoents/Workoutdetails";
 import { Workoutform } from "../compoents/Workoutform";
+import { UseAuthContext } from "../hooks/Useauthcontext";
 
 export function Home(){
+
+  const { user } = UseAuthContext();
 
   const {workouts,dispatch} = Useworkoutcontext();
     
     useEffect(() => {
-      fetch('http://localhost:3000/workouts').then(async function(res){
-      const json = await res.json();
-      const payload = json.workouts;
-      
-      if(res.ok){
-        dispatch({type:'SET_WORKOUTS',payload:payload})
-      }
-    })
-  }, [dispatch]); 
+           if(user){
+            fetch('http://localhost:3000/workouts',{
+              headers:{
+                'Authorization': `Bearer ${user.token}`
+              }
+            }).then(async function(res){
+              const json = await res.json();
+              const payload = json.workouts;
+              
+              if(res.ok){
+                dispatch({type:'SET_WORKOUTS',payload:payload})
+              }
+            })
+           }
+  }, [dispatch,user]); 
 
  
    

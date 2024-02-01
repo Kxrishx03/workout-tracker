@@ -17,7 +17,7 @@ export function Navbar(){
             <div>
               { user && (
             <div className="logout-btn">
-            <span>{user.username}</span>
+            <span className="username">{user.username}</span>
             <button onClick={ClickHandler}>LOGOUT</button></div>
               )}
             { !user && (

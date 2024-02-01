@@ -174,3 +174,16 @@ button:hover{
   display: flex;
   justify-content: space-evenly;
 }
+
+.username{
+  margin: 10px;
+}
+
+.error{
+  border: #e65f5f solid 1px;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(232, 152, 152);
+  border-radius: 5px;
+
+}
