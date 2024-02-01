@@ -18,6 +18,7 @@ export function Workoutdetails({title,load,reps,createdAt,id}){
               }
         });
         const json = await response.json();
+        console.log("j"+json)
         if(response.ok){
             dispatch({type:'DELETE_WORKOUT',payload:json});
         }
