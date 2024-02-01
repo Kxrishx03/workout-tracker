@@ -14,12 +14,12 @@ export function Login(){
     return(  
     <form className="login"  onSubmit={OnSubmitHandler}>
        <h4>LOGIN HERE!</h4>
-    <label typeof="text"> Username</label>
+   
     <input type="text" placeholder="Username" value={username} onChange={(e)=>{
      setUsername(e.target.value)
     }}></input>
 
-    <label typeof="text">Password</label>
+ 
     <input type="text" placeholder="Password" value={Password} onChange={(e)=>{
      setPassword(e.target.value)
     }}></input>
