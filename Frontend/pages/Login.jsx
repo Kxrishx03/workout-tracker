@@ -1,7 +1,11 @@
 import { useState } from "react";
+import { useLogin } from "../hooks/Uselogin";
+
 
 export function Login(){
 
+
+     const  { login , isLoading , error} = useLogin();
      const [username,setUsername] = useState('');
      const [Password,setPassword] = useState('');
 
@@ -9,6 +13,7 @@ export function Login(){
      async function OnSubmitHandler(e){
         e.preventDefault();
         console.log(username,Password);
+        await login(username,Password);
   }
      
     return(  
@@ -25,6 +30,7 @@ export function Login(){
     }}></input>
 
     <button>Login</button>
+    {error && <div className="error">{error}</div>}
    
  </form>
 );

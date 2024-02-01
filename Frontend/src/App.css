@@ -150,3 +150,27 @@ form button {
   width: 25rem;
  
 }
+
+.logout-btn button{
+  background-color: #503459;
+  border: 0;
+  color: #fff;
+  margin-top: 20px;
+  margin-right: 8px;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+button:hover{
+  background-color: #dac9df;
+  color: #000;
+  border: #000 solid 1px;
+}
+
+.login-signup-button{
+  display: flex;
+  justify-content: space-evenly;
+}
