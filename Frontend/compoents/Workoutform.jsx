@@ -19,7 +19,7 @@ export function Workoutform(){
             return;
         }
         const workout = {title,load,reps};
-        const response = await fetch('http://localhost:3000/workouts',{
+        const response = await fetch('https://workout-tracker-apbs.vercel.app/workouts',{
              method:"POST",
              body:JSON.stringify(workout),
              headers:{

@@ -14,6 +14,8 @@ const userSchema = new Schema({
         required:true
     }
 });
+
+
 //signup static method
 userSchema.statics.signup = async function(username,password){
 

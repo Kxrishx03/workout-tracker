@@ -11,7 +11,7 @@ export function Workoutdetails({title,load,reps,createdAt,id}){
         if(!user){
             return;
         }
-        const response = await fetch('http://localhost:3000/workouts/' + id,{
+        const response = await fetch('https://workout-tracker-apbs.vercel.app/workouts' + id,{
             method:'DELETE',
             headers:{
                 'Authorization': `Bearer ${user.token}`
